@@ -9,12 +9,12 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",  # Local development
-        "https://sl-fuel-price-api.onrender.com",  # Your API domain
-        "https://*.vercel.app",  # Vercel deployment domains
+        "http://localhost:3000",  
+        "https://sl-fuel-price-api.onrender.com",  
+        "https://*.vercel.app",  
         "https://*.vercel.com",
-        "https://relaxed-gingersnap-4787a1.netlify.app" ,  # Vercel deployment domains
-        # Add other domains as needed
+        "https://relaxed-gingersnap-4787a1.netlify.app" ,  
+        
     ],
     allow_credentials=True,
     allow_methods=["*"],
