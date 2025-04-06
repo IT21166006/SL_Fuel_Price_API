@@ -8,10 +8,16 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=[
+        "http://localhost:3000",  # Local development
+        "https://sl-fuel-price-api.onrender.com",  # Your API domain
+        "https://*.vercel.app",  # Vercel deployment domains
+        "https://*.vercel.com",  # Vercel deployment domains
+        # Add other domains as needed
+    ],
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 @app.get("/fuel-prices")
