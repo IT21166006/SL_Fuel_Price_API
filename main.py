@@ -12,7 +12,8 @@ app.add_middleware(
         "http://localhost:3000",  # Local development
         "https://sl-fuel-price-api.onrender.com",  # Your API domain
         "https://*.vercel.app",  # Vercel deployment domains
-        "https://*.vercel.com",  # Vercel deployment domains
+        "https://*.vercel.com",
+        "https://relaxed-gingersnap-4787a1.netlify.app" ,  # Vercel deployment domains
         # Add other domains as needed
     ],
     allow_credentials=True,
